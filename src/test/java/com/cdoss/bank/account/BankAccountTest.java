@@ -21,4 +21,11 @@ public class BankAccountTest {
 		assertEquals(0.00, account.getBalance(), 0.00);
 	}
 
+	@Test
+	public void depositMoneyIntoAccount() {
+		account = new CheckingAccount();
+		account.deposit(100.00);
+		assertEquals(100.00, account.getBalance(), 0.00);
+	}
+
 }

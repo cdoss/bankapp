@@ -1,9 +1,8 @@
 package com.cdoss.bank.account;
 
-public class CheckingAccount implements Account {
+public class CheckingAccount extends AbstractAccount {
 
-	public double getBalance() {
-		return 0;
+	public CheckingAccount() {
+		super();
 	}
-
 }

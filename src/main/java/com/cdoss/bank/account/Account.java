@@ -4,4 +4,6 @@ public interface Account {
 
 	double getBalance();
 
+	void deposit(double d);
+
 }

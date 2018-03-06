@@ -12,4 +12,7 @@ public abstract class AbstractAccount implements Account {
 		balance += deposit;
 	}
 
+	public void withdraw(double withdrawal) {
+		balance -= withdrawal;
+	}
 }

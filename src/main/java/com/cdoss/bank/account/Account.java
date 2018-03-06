@@ -6,4 +6,6 @@ public interface Account {
 
 	void deposit(double d);
 
+	void withdraw(double d);
+
 }

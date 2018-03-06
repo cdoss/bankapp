@@ -4,6 +4,10 @@ public abstract class AbstractAccount implements Account {
 
 	private double balance = 0.00;
 
+	public AbstractAccount(double deposit) {
+		this.balance = deposit;
+	}
+
 	public double getBalance() {
 		return balance;
 	}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jdbc:embedded-database id="bank_test" type="H2">
+	<jdbc:script location="classpath:db/sql/create-db.sql" />
+	<jdbc:script location="classpath:db/sql/insert-data.sql" />
+</jdbc:embedded-database>

@@ -21,6 +21,15 @@ public class BankAccountTest {
 		account = null;
 	}
 
+	// @Bean
+	// public DataSource dataSource() {
+	// EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
+	// EmbeddedDatabase db =
+	// builder.setType(EmbeddedDatabaseType.H2).addScript("db/create-db.sql")
+	// .addScript("db/insert-data.sql").setName("bank").build();
+	// return db;
+	// }
+
 	@Test
 	public void createBankAccount() {
 		assertNotNull(account);

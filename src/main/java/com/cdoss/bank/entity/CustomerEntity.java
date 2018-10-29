@@ -17,8 +17,8 @@ public class CustomerEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "customer_id")
-	private int customerId;
+	@Column(name = "id")
+	private int id;
 	@Column(name = "first_name")
 	private String firstName;
 	@Column(name = "middle_initial")

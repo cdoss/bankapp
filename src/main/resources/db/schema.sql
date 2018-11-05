@@ -1,5 +1,5 @@
 CREATE TABLE customer(
-	customer_id INT AUTO_INCREMENT PRIMARY KEY,
+	id INT AUTO_INCREMENT PRIMARY KEY,
 	first_name VARCHAR(64),
 	middle_initial VARCHAR(1),
 	last_name VARCHAR(64),
@@ -19,7 +19,7 @@ CREATE TABLE contact_info(
 	cell_phone INT,
 	fax_number INT,
 	email_address VARCHAR(64),
-	customer_id INT FOREIGN KEY REFERENCES customer(customer_id)
+	FOREIGN KEY (customer_id) REFERENCES customer(id)
 );
 
 CREATE TABLE account_type(
@@ -34,6 +34,6 @@ CREATE TABLE account(
 	account_type VARCHAR(32),
 	is_frozen BOOLEAN,
 	is_overdrafted BOOLEAN,
-	customer_id INT FOREIGN KEY REFERENCES customer(customer_id),
-	account_type VARCHAR FOREIGN KEY REFERENCES account_type(name)
+	FOREIGN KEY (customer_id) REFERENCES customer(id),
+	FOREIGN KEY (account_type) REFERENCES account_type(name)
 );

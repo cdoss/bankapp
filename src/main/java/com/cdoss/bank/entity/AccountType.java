@@ -1,8 +1,8 @@
 package com.cdoss.bank.entity;
 
-public class Account {
+public class AccountType {
 
-	public Account() {
+	public AccountType() {
 		// TODO Auto-generated constructor stub
 	}
 

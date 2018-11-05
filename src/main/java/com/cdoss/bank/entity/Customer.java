@@ -12,11 +12,11 @@ import javax.persistence.Table;
 public class Customer {
 
 	public Customer() {
-		// TODO Auto-generated constructor stub
+		super();
 	}
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
 	@Column(name = "first_name")

@@ -1,10 +1,11 @@
 package com.cdoss.bank.account.it;
 
-import javax.annotation.Resource;
+import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -15,13 +16,20 @@ import com.cdoss.bank.repository.CustomerRepository;
 @SpringBootTest
 public class IntergrationTest {
 
-	@Resource
-	private CustomerRepository customerRepository;
-	
+	@Autowired
+	CustomerRepository customerRepository;
+
 	@Test
 	public void test() {
-		Customer customer = customerRepository.findById(1);
-		Assert.assertEquals("John", customer.getFirstName());
+		Customer customer = new Customer();
+		customer.setFirstName("Jane");
+		customer.setLastName("Doe");
+
+		customerRepository.save(customer);
+		List<Customer> list = customerRepository.findAll();
+		System.out.println("Customers: " + list.toString());
+		customer = customerRepository.findById(1);
+		Assert.assertEquals("Jane", customer.getFirstName());
 	}
 
 }

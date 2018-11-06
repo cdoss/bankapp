@@ -1,5 +1,6 @@
 package com.cdoss.bank.account.it;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Assert;
@@ -16,20 +17,42 @@ import com.cdoss.bank.repository.CustomerRepository;
 @SpringBootTest
 public class IntergrationTest {
 
+	public IntergrationTest() {
+		fakeCustomerList = new ArrayList<Customer>();
+		Customer customer = new Customer();
+		customer.setFirstName("Chandy");
+		customer.setMiddleInitial("S");
+		customer.setLastName("Doss");
+		customer.setSuffix(null);
+		fakeCustomerList.add(customer);
+
+		// customerRepository = Mockito.mock(CustomerRepository.class);
+		// Mockito.when(customerRepository.save(customer)).thenReturn(customer);
+		// Mockito.when(customerRepository.findAll()).thenReturn(fakeCustomerList);
+	}
+
 	@Autowired
 	CustomerRepository customerRepository;
+	// @Mock
+	// CustomerRepository customerRepository;
+	List<Customer> fakeCustomerList;
 
 	@Test
 	public void test() {
 		Customer customer = new Customer();
-		customer.setFirstName("Jane");
-		customer.setLastName("Doe");
-
+		customer.setFirstName("Chandy");
+		customer.setMiddleInitial("S");
+		customer.setLastName("Doss");
+		customer.setSuffix(null);
 		customerRepository.save(customer);
+
 		List<Customer> list = customerRepository.findAll();
 		System.out.println("Customers: " + list.toString());
-		customer = customerRepository.findById(1);
-		Assert.assertEquals("Jane", customer.getFirstName());
+		customer = list.get(list.size() - 1);
+		Assert.assertEquals("Chandy", customer.getFirstName());
+		Assert.assertEquals("S", customer.getMiddleInitial());
+		Assert.assertEquals("Doss", customer.getLastName());
+		Assert.assertNull(customer.getSuffix());
 	}
 
 }

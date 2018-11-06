@@ -8,6 +8,6 @@ public interface Account {
 
 	void withdraw(double d);
 
-	Enum<AccountType> getAccountType();
+	Enum<AccountTypeEnum> getAccountType();
 
 }

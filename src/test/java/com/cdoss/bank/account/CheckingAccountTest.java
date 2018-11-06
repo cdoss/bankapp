@@ -9,7 +9,7 @@ public class CheckingAccountTest {
 	@Test
 	public void getCheckingAccountType() {
 		Account account = new CheckingAccount(0.00);
-		assertEquals(AccountType.CHECKING, account.getAccountType());
+		assertEquals(AccountTypeEnum.CHECKING, account.getAccountType());
 	}
 
 }

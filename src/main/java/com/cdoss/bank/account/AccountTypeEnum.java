@@ -1,5 +1,5 @@
 package com.cdoss.bank.account;
 
-public enum AccountType {
+public enum AccountTypeEnum {
 	CHECKING, SAVINGS
 }

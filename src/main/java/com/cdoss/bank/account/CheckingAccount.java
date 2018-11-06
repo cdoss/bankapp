@@ -6,7 +6,7 @@ public class CheckingAccount extends AbstractAccount {
 		super(deposit);
 	}
 
-	public Enum<AccountType> getAccountType() {
-		return AccountType.CHECKING;
+	public Enum<AccountTypeEnum> getAccountType() {
+		return AccountTypeEnum.CHECKING;
 	}
 }

@@ -1,5 +1,5 @@
 CREATE TABLE customer(
-	id INT AUTO_INCREMENT PRIMARY KEY,
+	id BIGINT AUTO_INCREMENT PRIMARY KEY,
 	first_name VARCHAR(64),
 	middle_initial VARCHAR(1),
 	last_name VARCHAR(64),
@@ -7,8 +7,8 @@ CREATE TABLE customer(
 );
 
 CREATE TABLE contact_info(
-	id INT AUTO_INCREMENT PRIMARY KEY,
-	customer_id INT,
+	id BIGINT AUTO_INCREMENT PRIMARY KEY,
+	customer_id BIGINT,
 	address VARCHAR(64),
 	address2 VARCHAR(64),
 	city VARCHAR(64),
@@ -29,8 +29,8 @@ CREATE TABLE account_type(
 
 CREATE TABLE account(
 	id BIGINT AUTO_INCREMENT PRIMARY KEY,
-	customer_id INT,
-	balance BIGINT,
+	customer_id BIGINT,
+	balance DECIMAL(65,2),
 	account_type VARCHAR(32),
 	is_frozen BOOLEAN,
 	is_overdrafted BOOLEAN,

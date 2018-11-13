@@ -46,9 +46,7 @@ public class IntergrationTest {
 		customer.setSuffix(null);
 		customerRepository.save(customer);
 
-		List<Customer> list = customerRepository.findAll();
-		System.out.println("Customers: " + list.toString());
-		customer = list.get(list.size() - 1);
+		customer = customerRepository.findById(3);
 		Assert.assertEquals("Chandy", customer.getFirstName());
 		Assert.assertEquals("S", customer.getMiddleInitial());
 		Assert.assertEquals("Doss", customer.getLastName());

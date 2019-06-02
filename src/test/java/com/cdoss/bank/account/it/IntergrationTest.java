@@ -25,16 +25,11 @@ public class IntergrationTest {
 		customer.setLastName("Doss");
 		customer.setSuffix(null);
 		fakeCustomerList.add(customer);
-
-		// customerRepository = Mockito.mock(CustomerRepository.class);
-		// Mockito.when(customerRepository.save(customer)).thenReturn(customer);
-		// Mockito.when(customerRepository.findAll()).thenReturn(fakeCustomerList);
 	}
 
 	@Autowired
 	CustomerRepository customerRepository;
-	// @Mock
-	// CustomerRepository customerRepository;
+	
 	List<Customer> fakeCustomerList;
 
 	@Test

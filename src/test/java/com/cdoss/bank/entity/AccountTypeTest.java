@@ -14,15 +14,20 @@ public class AccountTypeTest {
 	AccountType accountType;
 
 	@Test
-	public void checkingAccountTypeTest() {
+	public void accountTypeIsCheckingTest() {
 		accountType = new AccountType(AccountTypeEnum.CHECKING);
 		accountType.setId(10);
 		Enum<AccountTypeEnum> type = accountType.getName();
 		Assert.assertEquals(10, accountType.getId());
 		Assert.assertEquals(AccountTypeEnum.CHECKING, type);
+	}
 
-		accountType = new AccountType();
-		accountType.setName(AccountTypeEnum.SAVINGS);
-		Assert.assertEquals(AccountTypeEnum.SAVINGS, accountType.getName());
+	@Test
+	public void accountTypeIsSavingsTest() {
+		accountType = new AccountType(AccountTypeEnum.SAVINGS);
+		accountType.setId(20);
+		Enum<AccountTypeEnum> type = accountType.getName();
+		Assert.assertEquals(20, accountType.getId());
+		Assert.assertEquals(AccountTypeEnum.SAVINGS, type);
 	}
 }

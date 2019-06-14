@@ -14,6 +14,14 @@ public class Customer {
 	public Customer() {
 		super();
 	}
+	
+	public Customer(String firstName, String middleInitial, String lastName, String suffix) {
+		super();
+		this.firstName = firstName;
+		this.middleInitial = middleInitial;
+		this.lastName = lastName;
+		this.suffix = suffix;
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,8 +1,5 @@
 package com.cdoss.bank.account.it;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,28 +14,12 @@ import com.cdoss.bank.repository.CustomerRepository;
 @SpringBootTest
 public class IntergrationTest {
 
-	public IntergrationTest() {
-		fakeCustomerList = new ArrayList<Customer>();
-		Customer customer = new Customer();
-		customer.setFirstName("Chandy");
-		customer.setMiddleInitial("S");
-		customer.setLastName("Doss");
-		customer.setSuffix(null);
-		fakeCustomerList.add(customer);
-	}
-
 	@Autowired
 	CustomerRepository customerRepository;
-	
-	List<Customer> fakeCustomerList;
 
 	@Test
 	public void test() {
-		Customer customer = new Customer();
-		customer.setFirstName("Chandy");
-		customer.setMiddleInitial("S");
-		customer.setLastName("Doss");
-		customer.setSuffix(null);
+		Customer customer = new Customer("Chandy", "S", "Doss", null);
 		customerRepository.save(customer);
 
 		customer = customerRepository.findById(3);

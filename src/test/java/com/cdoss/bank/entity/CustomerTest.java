@@ -12,12 +12,8 @@ public class CustomerTest {
 	@Test
 	public void customerModelTest() {
 
-		Customer customer = new Customer();
+		Customer customer = new Customer("Chandy", "S", "Doss", null);
 		customer.setId(20);
-		customer.setFirstName("Chandy");
-		customer.setMiddleInitial("S");
-		customer.setLastName("Doss");
-		customer.setSuffix(null);
 
 		Assert.assertEquals(20, customer.getId());
 		Assert.assertEquals("Chandy", customer.getFirstName());

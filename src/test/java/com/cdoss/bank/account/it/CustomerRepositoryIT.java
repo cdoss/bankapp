@@ -12,13 +12,13 @@ import com.cdoss.bank.repository.CustomerRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
-public class IntergrationTest {
+public class CustomerRepositoryIT {
 
 	@Autowired
 	CustomerRepository customerRepository;
 
 	@Test
-	public void test() {
+	public void newCustomerSavetest() {
 		Customer customer = new Customer("Chandy", "S", "Doss", null);
 		customerRepository.save(customer);
 

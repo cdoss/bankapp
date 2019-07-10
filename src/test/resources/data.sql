@@ -4,4 +4,4 @@ INSERT INTO contact_info (customer_id, address, address2, city, state, zip_code,
 
 INSERT INTO account_type (name) VALUES ('Checking'), ('Savings');
 
-INSERT INTO account (customer_id, balance, account_type, is_frozen, is_overdrafted) VALUES (1, 0.00, 'Checking', false, false);
+INSERT INTO account (customer_id, balance, account_type, is_frozen, is_overdrafted) VALUES (1, 0.00, 'Checking', false, false), (2, 0.00, 'Checking', false, false);

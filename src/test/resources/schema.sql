@@ -13,11 +13,11 @@ CREATE TABLE contact_info(
 	address2 VARCHAR(64),
 	city VARCHAR(64),
 	state VARCHAR(64),
-	zip_code INT,
-	home_phone INT,
-	business_phone INT,
-	cell_phone INT,
-	fax_number INT,
+	zip_code VARCHAR(16),
+	home_phone VARCHAR(32),
+	business_phone VARCHAR(32),
+	cell_phone VARCHAR(32),
+	fax_number VARCHAR(32),
 	email_address VARCHAR(64),
 	FOREIGN KEY (customer_id) REFERENCES customer(id)
 );

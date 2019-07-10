@@ -30,7 +30,7 @@ public class ContactInfo {
 	@Column(name = "state")
 	private String state;
 	@Column(name = "zip_code")
-	private int zipCode;
+	private String zipCode;
 	@Column(name = "home_phone")
 	private String homePhone;
 	@Column(name = "business_phone")
@@ -90,11 +90,11 @@ public class ContactInfo {
 		this.state = state;
 	}
 
-	public int getZipCode() {
+	public String getZipCode() {
 		return zipCode;
 	}
 
-	public void setZipCode(int zipCode) {
+	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
 

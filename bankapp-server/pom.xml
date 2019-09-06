@@ -20,8 +20,13 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<flyway.user>bankadmin</flyway.user>
+		<flyway.password>bank123</flyway.password>
+		<flyway.schemas>bank</flyway.schemas>
+		<flyway.url>jdbc:mysql://localhost:3306/bank?serverTimezone=UTC</flyway.url>
+		<flyway.locations>classpath:db/migration</flyway.locations>
 	</properties>
 
 	<dependencies>
@@ -56,6 +61,10 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
 		</dependency>
 	</dependencies>
 

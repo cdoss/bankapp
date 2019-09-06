@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS customer;
 CREATE TABLE customer(
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	first_name VARCHAR(64),
@@ -6,6 +7,7 @@ CREATE TABLE customer(
 	suffix VARCHAR(32)
 );
 
+DROP TABLE IF EXISTS contact_info;
 CREATE TABLE contact_info(
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	customer_id INT,
@@ -22,11 +24,13 @@ CREATE TABLE contact_info(
 	FOREIGN KEY (customer_id) REFERENCES customer(id)
 );
 
+DROP TABLE IF EXISTS account_type;
 CREATE TABLE account_type(
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(32)	
 );
 
+DROP TABLE IF EXISTS account;
 CREATE TABLE account(
 	id BIGINT AUTO_INCREMENT PRIMARY KEY,
 	customer_id INT,

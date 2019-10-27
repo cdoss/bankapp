@@ -8,6 +8,4 @@ import com.cdoss.bank.entity.Customer;
 @Repository
 public interface CustomerRepository extends CrudRepository<Customer, Integer> {
 
-	public Customer findById(int id);
-
 }

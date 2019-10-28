@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cdoss.bank.entity.Customer;
@@ -21,7 +20,7 @@ public class CustomerController {
 	@Autowired
 	private CustomerRepository repository;
 
-	@RequestMapping(value = "/customers", method = RequestMethod.GET)
+	@GetMapping(value = "/customers")
 	List<Customer> findAll() {
 		List<Customer> customers = new ArrayList<>();
 

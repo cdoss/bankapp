@@ -21,7 +21,7 @@ public class CustomerController {
 	private CustomerRepository repository;
 
 	@GetMapping(value = "/customers")
-	List<Customer> findAll() {
+	public List<Customer> findAllCustomers() {
 		List<Customer> customers = new ArrayList<>();
 
 		Iterable<Customer> results = this.repository.findAll();

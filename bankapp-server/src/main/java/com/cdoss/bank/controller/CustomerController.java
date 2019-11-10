@@ -21,12 +21,12 @@ public class CustomerController {
 	private CustomerService customerService;
 
 	@GetMapping(value = "/customers")
-	public List<Customer> findAllCustomers() {
-		return customerService.findAllCustomers();
+	public List<Customer> getAllCustomers() {
+		return customerService.getAllCustomers();
 	}
 	
 	@GetMapping(value = "/customers/{id}")
-	public Customer findCustomer(@PathVariable("id") int id) {
-		return customerService.findCustomer(id);
+	public Customer getCustomer(@PathVariable("id") int id) {
+		return customerService.getCustomer(id);
 	}
 }

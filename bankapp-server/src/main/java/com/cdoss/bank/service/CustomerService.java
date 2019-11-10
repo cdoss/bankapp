@@ -30,7 +30,7 @@ public class CustomerService {
 	private final ContactInfoRepository contactInfoRepository;
 	private final CustomerRepository customerRepository;
 	
-	public List<Customer> findAllCustomers() {
+	public List<Customer> getAllCustomers() {
 		List<Customer> customers = new ArrayList<Customer>();
 
 		Iterable<Customer> results = this.customerRepository.findAll();
@@ -41,7 +41,7 @@ public class CustomerService {
 		return customers;
 	}
 	
-	public Customer findCustomer(int customerId) {
+	public Customer getCustomer(int customerId) {
 		return this.customerRepository.findById(customerId).get();
 	}
 }

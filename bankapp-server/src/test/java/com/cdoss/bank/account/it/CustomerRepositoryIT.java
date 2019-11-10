@@ -22,7 +22,7 @@ public class CustomerRepositoryIT {
 		Customer customer = new Customer("Chandy", "S", "Doss", null);
 		customerRepository.save(customer);
 
-		customer = customerRepository.findById(3);
+		customer = customerRepository.findById(3).get();
 		Assert.assertEquals("Chandy", customer.getFirstName());
 		Assert.assertEquals("S", customer.getMiddleInitial());
 		Assert.assertEquals("Doss", customer.getLastName());

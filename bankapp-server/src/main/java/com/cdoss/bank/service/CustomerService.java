@@ -40,4 +40,8 @@ public class CustomerService {
 
 		return customers;
 	}
+	
+	public Customer findCustomer(int customerId) {
+		return this.customerRepository.findById(customerId).get();
+	}
 }

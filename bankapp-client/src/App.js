@@ -1,10 +1,8 @@
-import React from 'react';
-import Hello from './Hello'
+import React from "react";
+import BankApp from "./BankApp";
 
 function App() {
-  return (
-    <Hello object="World"/>
-  );
+  return <BankApp />;
 }
 
 export default App;

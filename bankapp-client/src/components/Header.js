@@ -1,5 +1,13 @@
 import React from "react";
+import "./Header.css";
 
 export default function Header() {
-  return <div>Header - BankApp</div>;
+  return (
+    <div>
+      <div className="appMenu"></div>
+      <div className="appMenu"></div>
+      <div className="appMenu"></div>
+      Header - BankApp
+    </div>
+  );
 }

@@ -1,14 +1,13 @@
 import React from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function BankApp() {
   return (
     <div>
-      <div>Header - BankApp</div>
-      <div>
-        Dashboard
-        <div>Accounts</div>
-      </div>
-      <div>Footer</div>
+      <Header />
+      <Dashboard />
+      <Footer />
     </div>
   );
 }
